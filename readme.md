@@ -53,16 +53,16 @@ Through this course, I have developed expertise in the following areas:
 ## Folder Structure
 
 Each folder in this repository corresponds to a specific exercise or project from the course:
-coding-exercise-01/ # First exercise
-coding-exercise-02/ # Second exercise
-...
-coding-exercise-xx/ # Latest exercise 
+- coding-exercise-01/ # First exercise
+- coding-exercise-02/ # Second exercise
+- ...
+- coding-exercise-xx/ # Latest exercise 
 
 ---
 
 ## Why This Matters
 
-React is one of the most popular JavaScript libraries used to build modern, reactive user interfaces for the web. By completing this course, I have not only gained a deep understanding of React but also learned how to apply it effectively in real-world scenarios. This repository demonstrates my ability to translate theoretical knowledge into practical solutions—skills that are highly valuable for any developer role.
+React is one of the most popular JavaScript libraries used to build modern, reactive user interfaces for the web. By completing this course, I have not only gained a deep understanding of React but also learned how to apply it effectively in real-world scenarios. This repository demonstrates my ability to translate theoretical knowledge into practical solutions — are skills that are highly valuable for any developer role.
 
 Whether you're a recruiter evaluating my profile or a fellow developer looking for inspiration, I hope this repository provides valuable insights into my journey of mastering React.
 
@@ -72,8 +72,8 @@ Whether you're a recruiter evaluating my profile or a fellow developer looking f
 
 If you have any questions about my projects or would like to discuss opportunities, feel free to reach out:
 
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/avoiann)
-- **GitHub**: [Your GitHub Profile](https://github.com/ibxibx)
+- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/avoiann)
+- **GitHub**: [My GitHub Profile](https://github.com/ibxibx)
 - **Email**: ian@ianworks.dev
 
 Thank you for visiting, and happy coding! 🚀
