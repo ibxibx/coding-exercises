@@ -6,7 +6,7 @@ Welcome to my repository where I document and share my weekly exercises from the
 
 ## About This Repository
 
-I'm continuing my #100DaysOfCode challenge with the **"React - The Complete Guide 2025"** structured and themed mini-projects. Each assignment is meticulously documented in its own folder named `assignment-xx`, corresponding to each exercise in the course. 
+I'm continuing my #100DaysOfCode challenge with the **"React - The Complete Guide 2025"** structured and themed mini-projects. Each assignment is meticulously documented in its own folder named `coding-exercise-xx`, corresponding to each exercise in the course.
 
 Meanwhile, I implemented the first 26 tasks into my **FinPanel project**, and I will continue conventionally numbering my social media posts about my progress with the assignments as I started with #100DaysOfCode.
 
@@ -53,10 +53,11 @@ Through this course, I have developed expertise in the following areas:
 ## Folder Structure
 
 Each folder in this repository corresponds to a specific exercise or project from the course:
+
 - coding-exercise-01/ # First exercise
 - coding-exercise-02/ # Second exercise
 - ...
-- coding-exercise-xx/ # Latest exercise 
+- coding-exercise-xx/ # Latest exercise
 
 ---
 
@@ -77,4 +78,3 @@ If you have any questions about my projects or would like to discuss opportuniti
 - **Email**: ian@ianworks.dev
 
 Thank you for visiting, and happy coding! 🚀
-
