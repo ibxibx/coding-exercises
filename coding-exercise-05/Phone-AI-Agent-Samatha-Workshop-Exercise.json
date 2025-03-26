@@ -1,0 +1,167 @@
+{
+  "name": "PhoneAgent",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Hello, summarize the following conversation please:\n\n{{ $json.body.message.toJsonString() }}\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        460,
+        0
+      ],
+      "id": "007d6ceb-57eb-4190-8714-08e5fd61dd9d",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        280,
+        340
+      ],
+      "id": "8ab16665-2db3-4ef3-84dd-63e891b6e5b8",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "6Q82VFAPmXOaKcLM",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "d0c42480-1d35-4676-a405-52a0a91364e5",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        180,
+        0
+      ],
+      "id": "5a0e5fc5-b9ad-41d4-ad97-8b1fb3b59360",
+      "name": "Webhook",
+      "webhookId": "d0c42480-1d35-4676-a405-52a0a91364e5"
+    },
+    {
+      "parameters": {
+        "driveId": "=myDrive",
+        "folderId": "default",
+        "title": "VoiceAiAgent"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        920,
+        100
+      ],
+      "id": "52469c09-cf36-43c9-b6a8-a795f06d6fa7",
+      "name": "Google Docs",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "k3QCHvRmj8L8jVeu",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $json.id }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "={{ $('AI Agent').item.json.output }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1160,
+        100
+      ],
+      "id": "0ee23ef8-a154-461a-b96d-a751f347b2a0",
+      "name": "Google Docs1",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "k3QCHvRmj8L8jVeu",
+          "name": "Google Docs account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "Google Docs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d6b2e9df-6159-4f3e-a3e3-315a0b3f151c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ebd72f7db26dabd985e0d8e92a189738ea3669664c1ffc21c5db416d8a585e71"
+  },
+  "id": "TEJwJg2H1dDI6WpJ",
+  "tags": []
+}
